@@ -1,6 +1,6 @@
 ﻿
 
-namespace Opendata.cwb.gov.tw
+namespace Opendata
 {
     using Newtonsoft.Json;
 

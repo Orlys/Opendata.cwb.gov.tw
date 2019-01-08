@@ -1,5 +1,5 @@
 ﻿
-namespace Opendata.cwb.gov.tw.Models
+namespace Opendata.Models
 {
     using System;
     using System.Text;

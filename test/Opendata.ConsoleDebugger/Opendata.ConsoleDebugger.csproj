@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Opendata.cwb.gov.tw\Opendata.cwb.gov.tw.csproj" />
+    <None Remove="Program.cs~RF3f6a17fa.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Opendata.cwb.gov.tw\Opendata.csproj" />
   </ItemGroup>
 
 </Project>

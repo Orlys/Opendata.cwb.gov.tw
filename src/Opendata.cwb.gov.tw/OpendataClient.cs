@@ -1,5 +1,5 @@
 ﻿
-namespace Opendata.cwb.gov.tw
+namespace Opendata
 {
     using System;
     using System.Net.Http;
@@ -21,7 +21,7 @@ namespace Opendata.cwb.gov.tw
         }
 
 
-        public virtual async Task<T> GetAsync<T>(QueryBy<T> queryBy, CancellationToken token = default)
+        public virtual async Task<T> GetAsync<T>(By<T> queryBy, CancellationToken token = default)
         {
             try
             {
