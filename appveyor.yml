@@ -1,4 +1,15 @@
+version: '{build}'
+
 image: Visual Studio 2017
+
+init: git config --global core.autocrlf true
+
+nuget:
+  disable_publish_on_pr: true  
+  account_feed: true
+  project_feed: true
+
+publish_nuget: true
 
 before_build:
     - nuget restore
@@ -8,9 +19,9 @@ platform:
     # - x64
     - Any CPU
 
-# configuration:
+configuration:
     # - Debug
-    # - Release
+    - Release
 
 branches:
     only:
@@ -21,12 +32,11 @@ environment:
     secure: rgzDkmzMohFVnVkgMqrUCg==
 
 install:
-  - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
+  - ps: |
+    Write-Host "Start decrypt token..."
+    iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
   - cmd: appveyor-tools\secure-file -decrypt ./misc/.token.enc -secret %token%
   - sh: ./appveyor-tools/secure-file -decrypt ./misc/.token.enc -secret token
 
-deploy:
-  provider: NuGet
-  api_key:
-    secure: +lbM93mJKtN7I6DjKFyYLdmflJH4d3bKLKqBosBJQ1tl7IJTtVBmsPrfbIA40dR4
-  artifact: '**\*.nupkg'
+after_build:
+    - nuget push ./src/Opendata.Core/bin/Release/Opendata.Core.1.0.0.nupkg -ApiKey 93gf2kld7tie693rw5sqom7e -Source https://ci.appveyor.com/nuget/0x0001f36d-6k7wspxc8l6y/api/v2/package
