@@ -9,14 +9,14 @@ nuget:
   account_feed: true
   project_feed: true
 
-platform:
+#platform:
     # - x86
     # - x64
-    - Any CPU
+    # - Any CPU
 
-configuration:
+#configuration:
     # - Debug
-    - Release
+    # - Release
 
 branches:
     only:
