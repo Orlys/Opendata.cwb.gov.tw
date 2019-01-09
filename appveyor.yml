@@ -15,12 +15,12 @@ platform:
 branches:
     only:
     - master
+    
+environment:
+  token:
+    secure: rgzDkmzMohFVnVkgMqrUCg==
 
 install:
   - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
-  - cmd: appveyor-tools\secure-file -decrypt ../../../../.././misc/.token.enc -secret %my_secret%
-  - sh: ./appveyor-tools/secure-file -decrypt ../../../../.././misc/.token.enc -secret $my_secret
-
-environment:
-  my_variable:
-    secure: rgzDkmzMohFVnVkgMqrUCg==
+  - cmd: appveyor-tools\secure-file -decrypt ../../../../.././misc/.token.enc -secret %token%
+  - sh: ./appveyor-tools/secure-file -decrypt ../../../../.././misc/.token.enc -secret token
