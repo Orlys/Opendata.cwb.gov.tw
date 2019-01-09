@@ -9,14 +9,14 @@ nuget:
   account_feed: true
   project_feed: true
 
-#platform:
+platform:
     # - x86
     # - x64
-    # - Any CPU
+    - Any CPU
 
-#configuration:
+configuration:
     # - Debug
-    # - Release
+    - Release
 
 branches:
     only:
@@ -38,5 +38,11 @@ before_build:
 build:
     publish_nuget: true
 
-after_build:
-    - nuget push ./src/Opendata.Core/bin/Release/Opendata.Core.1.0.0.nupkg -ApiKey 93gf2kld7tie693rw5sqom7e -Source https://ci.appveyor.com/nuget/0x0001f36d-6k7wspxc8l6y/api/v2/package
+deploy:
+  provider: NuGet
+  server:                  # remove to push to NuGet.org
+  api_key:
+    secure: 40rOVDXOWx1TwOU6OcKIkJ/i/8CYwlR0rKMF+yk9uFSbFG9GBQDoqfM/tfZyIPhO #93gf2kld7tie693rw5sqom7e
+  skip_symbols: false
+  symbol_server: https://ci.appveyor.com/nuget/0x0001f36d-6k7wspxc8l6y/api/v2/package
+  artifact: /.*\.nupkg/
