@@ -3,6 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.3</LangVersion>
+    <Authors>Viyrex(aka Yuyu)</Authors>
+    <Company />
+    <PackageLicenseUrl>https://raw.githubusercontent.com/0x0001F36D/Opendata.cwb.gov.tw/master/.license</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/0x0001F36D/Opendata.cwb.gov.tw</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/0x0001F36D/Opendata.cwb.gov.tw</RepositoryUrl>
+    <Description>臺灣中央氣象局 REST API 封裝</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Opendata.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <AssemblyName>Opendata.Core</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,16 +1,12 @@
-// Author: Viyrex(aka Yuyu)
-// Contact: mailto:viyrex.aka.yuyu@gmail.com
-// Github: https://github.com/0x0001F36D
 
 namespace Opendata.UnitTest
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using System.Threading.Tasks;
+    using System.Threading;
     using Opendata.Core;
-
     using System.Diagnostics;
     using System.IO;
-    using System.Threading.Tasks;
 
     [TestClass]
     public class OpendataClientUnitTest
