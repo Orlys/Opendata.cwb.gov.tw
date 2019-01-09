@@ -17,6 +17,8 @@
     <AssemblyName>Opendata.Core</AssemblyName>
     <PackageTags>Weather,Api,Science,Opendata,Taiwan,CWB</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.0</Version>
+    <Copyright>Copyright 2018 © Viyrex(aka Yuyu)</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
