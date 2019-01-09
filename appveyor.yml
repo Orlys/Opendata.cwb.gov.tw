@@ -32,9 +32,7 @@ environment:
     secure: rgzDkmzMohFVnVkgMqrUCg==
 
 install:
-  - ps: |
-    Write-Host "Start decrypt token..."
-    iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
+  - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
   - cmd: appveyor-tools\secure-file -decrypt ./misc/.token.enc -secret %token%
   - sh: ./appveyor-tools/secure-file -decrypt ./misc/.token.enc -secret token
 
