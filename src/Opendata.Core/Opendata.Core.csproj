@@ -8,12 +8,14 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/0x0001F36D/Opendata.cwb.gov.tw/master/.license</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/0x0001F36D/Opendata.cwb.gov.tw</PackageProjectUrl>
     <RepositoryUrl>https://github.com/0x0001F36D/Opendata.cwb.gov.tw</RepositoryUrl>
-    <Description>臺灣中央氣象局 REST API 封裝</Description>
+    <Description>臺灣中央氣象局 REST API 封裝 (使用C#)
+</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Opendata.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <AssemblyName>Opendata.Core</AssemblyName>
+    <PackageTags>Weather,Api,Science,Opendata,Taiwan,CWB</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

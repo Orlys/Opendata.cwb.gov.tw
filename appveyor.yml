@@ -24,3 +24,12 @@ install:
   - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
   - cmd: appveyor-tools\secure-file -decrypt ./misc/.token.enc -secret %token%
   - sh: ./appveyor-tools/secure-file -decrypt ./misc/.token.enc -secret token
+
+deploy:
+  provider: NuGet
+  server:                  # remove to push to NuGet.org
+  api_key:
+    secure: TOJ+yYmemuHkUKZbIM12dRlNjV8uT5WV3Pgid5nxwoQ=
+  skip_symbols: false
+  symbol_server:           # remove to push symbols to SymbolSource.org
+  artifact: /.*\.nupkg/
