@@ -9,11 +9,6 @@ nuget:
   account_feed: true
   project_feed: true
 
-publish_nuget: true
-
-before_build:
-    - nuget restore
-
 platform:
     # - x86
     # - x64
@@ -35,6 +30,13 @@ install:
   - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
   - cmd: appveyor-tools\secure-file -decrypt ./misc/.token.enc -secret %token%
   - sh: ./appveyor-tools/secure-file -decrypt ./misc/.token.enc -secret token
+  
+
+before_build:
+    - nuget restore
+
+build:
+    publish_nuget: true
 
 after_build:
     - nuget push ./src/Opendata.Core/bin/Release/Opendata.Core.1.0.0.nupkg -ApiKey 93gf2kld7tie693rw5sqom7e -Source https://ci.appveyor.com/nuget/0x0001f36d-6k7wspxc8l6y/api/v2/package
