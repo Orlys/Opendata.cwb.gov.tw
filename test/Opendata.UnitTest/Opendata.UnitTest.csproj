@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Opendata.cwb.gov.tw\Opendata.csproj" />
+    <ProjectReference Include="..\..\src\Opendata.Core\Opendata.Core.csproj" />
   </ItemGroup>
 
 </Project>
