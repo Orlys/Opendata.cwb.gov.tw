@@ -1,40 +1,40 @@
-## ¥xÆW¤¤¥¡®ğ¶H§½ REST API «Ê¸Ë
+## å°ç£ä¸­å¤®æ°£è±¡å±€ REST API å°è£
 
 [![Build status](https://ci.appveyor.com/api/projects/status/d5viju19wmj3tff6/branch/master?svg=true)](https://ci.appveyor.com/project/0x0001F36D/opendata-cwb-gov-tw/branch/master)
-## ·§Æ[
-¨S¬İ¨ì¤H¼gC#ª©¥»ªº«Ê¸Ë¡A©ó¬O§Ú´Nªá¤F¤@¨Ç®É¶¡¼g¤F³o­Ó¡C¦pªG¦³¿ù»~©Î¬O§A¦³§ó¦nªº¼gªk¡APR¤j¤O¥á´N¹ï¤F!!!§Ú¬İ§¹¨S°İÃD´N·|¦X¨Ö¤F¡C
+## æ¦‚è§€
+æ²’çœ‹åˆ°äººå¯«C#ç‰ˆæœ¬çš„å°è£ï¼Œæ–¼æ˜¯æˆ‘å°±èŠ±äº†ä¸€äº›æ™‚é–“å¯«äº†é€™å€‹ã€‚å¦‚æœæœ‰éŒ¯èª¤æˆ–æ˜¯ä½ æœ‰æ›´å¥½çš„å¯«æ³•ï¼ŒPRå¤§åŠ›ä¸Ÿå°±å°äº†!!!æˆ‘çœ‹å®Œæ²’å•é¡Œå°±æœƒåˆä½µäº†ã€‚
 
-## ±Ğ¾Ç
-1. ¥ıµn¤J [®ğ¶H¸ê®Æ¶}©ñ¥­¥x](https://opendata.cwb.gov.tw)
-2. «ö¤U [¦¹­¶](https://opendata.cwb.gov.tw/devManual/insrtuction#getUserAuthkeyAnchor) ¤¤ªº ![¨ú±o±ÂÅv½X](./img/getAuthCode.png) ¨ú±o¥k¤èªº±ÂÅv½X¨Ã½Æ»s
-3. ½Æ»s¤U¤èªºµ{¦¡½X
+## æ•™å­¸
+1. å…ˆç™»å…¥ [æ°£è±¡è³‡æ–™é–‹æ”¾å¹³å°](https://opendata.cwb.gov.tw)
+2. æŒ‰ä¸‹ [æ­¤é ](https://opendata.cwb.gov.tw/devManual/insrtuction#getUserAuthkeyAnchor) ä¸­çš„ ![å–å¾—æˆæ¬Šç¢¼](./img/getAuthCode.png) å–å¾—å³æ–¹çš„æˆæ¬Šç¢¼ä¸¦è¤‡è£½
+3. è¤‡è£½ä¸‹æ–¹çš„ç¨‹å¼ç¢¼
 ```csharp
 using Opendata.Core;
 ```
 ```csharp
-// «Ø¥ß³s½uª«¥ó
-var client = new OpendataClient(apikey: "§Aªº±ÂÅv½X");
-// ¦b QueryBy ÀRºAÃş§O¤¤¨Ì·Ó§A©Ò»İ­nªº dataId ¿ï¥X¹ïÀ³ªº¬d¸ßª«¥ó¡A¥H F-C0032-001(¤@¯ë¤Ñ®ğ¹w³ø-¤µ©ú 36 ¤p®É¤Ñ®ğ¹w³ø) ¬°¨Ò
+// å»ºç«‹é€£ç·šç‰©ä»¶
+var client = new OpendataClient(apikey: "ä½ çš„æˆæ¬Šç¢¼");
+// åœ¨ QueryBy éœæ…‹é¡åˆ¥ä¸­ä¾ç…§ä½ æ‰€éœ€è¦çš„ dataId é¸å‡ºå°æ‡‰çš„æŸ¥è©¢ç‰©ä»¶ï¼Œä»¥ F-C0032-001(ä¸€èˆ¬å¤©æ°£é å ±-ä»Šæ˜ 36 å°æ™‚å¤©æ°£é å ±) ç‚ºä¾‹
 var subject = QueryBy.F_C0032_001; 
-// ¨ú¦^ Records, §A­nªº¸ê®Æ³£¦b¸Ì­±
+// å–å› Records, ä½ è¦çš„è³‡æ–™éƒ½åœ¨è£¡é¢
 var records = client.GetAsync(queryBy: subject).Result;
 ```
 
-## ª©¥»
+## ç‰ˆæœ¬
  - 1.0.0
  
-## ¦w¸Ë
- > ¦w¸Ë¤w¸gµoªí¦Ü [nuget.org](https://nuget.org)¡A¦b®M¥óºŞ²z­û¤¤·j´M **Opendata.Core** §Y¥i
- - ¨Ï¥Î Package Manager
+## å®‰è£
+ > å®‰è£å·²ç¶“ç™¼è¡¨è‡³ [nuget.org](https://www.nuget.org/packages/Opendata.Core/)ï¼Œåœ¨å¥—ä»¶ç®¡ç†å“¡ä¸­æœå°‹ **Opendata.Core** å³å¯
+ - ä½¿ç”¨ Package Manager
     ```
     Install-Package Opendata.Core -Version 1.0.0
     ```
 
-## °Ñ¦Ò
-[¤¤¥¡®ğ¶H§½¶}©ñ¸ê®Æ¥­»O¤§¸ê®ÆÂ^¨úAPI](https://opendata.cwb.gov.tw/dist/opendata-swagger.html)
+## åƒè€ƒ
+[ä¸­å¤®æ°£è±¡å±€é–‹æ”¾è³‡æ–™å¹³è‡ºä¹‹è³‡æ–™æ“·å–API](https://opendata.cwb.gov.tw/dist/opendata-swagger.html)
 
-## ²Ä¤T¤è®M¥ó
+## ç¬¬ä¸‰æ–¹å¥—ä»¶
 [Json.Net](https://www.newtonsoft.com/)
 
-## ±ÂÅv
+## æˆæ¬Š
 [MIT License](./.license)
